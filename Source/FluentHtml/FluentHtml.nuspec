@@ -23,5 +23,6 @@
     <file src="bin\Release\FluentHtml.XML" target="lib\net45\FluentHtml.xml" />
     <file src="**\*.cs" target="src" />
     <file src="..\GlobalAssemblyInfo.cs" target="src" />
+    <file src="FluentHtml.css" target="content" />
   </files>
 </package>
