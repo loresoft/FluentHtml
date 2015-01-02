@@ -18,11 +18,11 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="FluentHtml.css" target="content\Content\FluentHtml.css" />
     <file src="bin\Release\FluentHtml.dll" target="lib\net45\FluentHtml.dll" />
     <file src="bin\Release\FluentHtml.pdb" target="lib\net45\FluentHtml.pdb" />
     <file src="bin\Release\FluentHtml.XML" target="lib\net45\FluentHtml.xml" />
     <file src="**\*.cs" target="src" />
     <file src="..\GlobalAssemblyInfo.cs" target="src" />
-    <file src="FluentHtml.css" target="content" />
   </files>
 </package>
