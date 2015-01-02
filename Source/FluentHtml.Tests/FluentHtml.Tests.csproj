@@ -45,6 +45,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
@@ -57,6 +59,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Routing" />
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
@@ -79,7 +82,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FluentHelperTest.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="Html\ButtonTests.cs" />
+    <Compile Include="Html\CheckBoxTests.cs" />
+    <Compile Include="Html\DropDownListBuilderTest.cs" />
+    <Compile Include="Html\LinkTests.cs" />
+    <Compile Include="Html\TextAreaTests.cs" />
+    <Compile Include="Html\TextBoxTests.cs" />
+    <Compile Include="MvcHelper.cs" />
+    <Compile Include="MvcMockHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
