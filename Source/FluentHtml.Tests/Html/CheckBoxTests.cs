@@ -5,7 +5,6 @@ using Xunit;
 
 namespace FluentHtml.Tests.Html
 {
-    
     public class CheckBoxTests
     {
         [Fact]
@@ -20,12 +19,12 @@ namespace FluentHtml.Tests.Html
                 .Name<Contact, bool>(c => c.IsActive)
                 .Checked();
 
+            var sb = new System.Text.StringBuilder();
+            sb.AppendLine(@"<input checked=""checked"" id=""IsActive"" name=""IsActive"" type=""checkbox"" value=""true"" />");
+            sb.Append(@"<input name=""IsActive"" type=""hidden"" value=""false"" />");
 
             var html = builder.ToHtmlString();
-            html.Should().Be(
-@"<input checked=""checked"" id=""IsActive"" name=""IsActive"" type=""checkbox"" value=""true"" />
-<input name=""IsActive"" type=""hidden"" value=""false"" />");
-
+            html.Should().Be(sb.ToString());
         }
 
         [Fact]
@@ -57,17 +56,19 @@ namespace FluentHtml.Tests.Html
                 .Name<Contact, bool>(c => c.IsActive)
                 .Checked();
 
+            var sb = new System.Text.StringBuilder();
+            sb.AppendLine(@"<label class=""sliderLabel"">");
+            sb.AppendLine(@"<input checked=""checked"" id=""IsActive"" name=""IsActive"" type=""checkbox"" value=""true"" />");
+            sb.AppendLine(@"<span class=""slider"">");
+            sb.AppendLine(@"<span class=""sliderTrue"">On</span>");
+            sb.AppendLine(@"<span class=""sliderFalse"">Off</span>");
+            sb.AppendLine(@"<span class=""sliderBlock""></span>");
+            sb.AppendLine(@"</span>");
+            sb.Append(@"</label>");
+
 
             var html = builder.ToHtmlString();
-            html.Should().Be(
-@"<label class=""sliderLabel"">
-<input checked=""checked"" id=""IsActive"" name=""IsActive"" type=""checkbox"" value=""true"" />
-<span class=""slider"">
-<span class=""sliderTrue"">On</span>
-<span class=""sliderFalse"">Off</span>
-<span class=""sliderBlock""></span>
-</span>
-</label>");
+            html.Should().Be(sb.ToString());
 
         }
 

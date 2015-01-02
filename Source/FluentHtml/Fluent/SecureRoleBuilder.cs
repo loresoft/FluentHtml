@@ -52,13 +52,6 @@ namespace FluentHtml.Fluent
             return RoleFromViewData(viewDataName, Component.WriteRoles);
         }
 
-
-        [Obsolete("Use WriteRoleViewData() instead.")]
-        public SecureRoleBuilder RolesFrom(string viewDataName)
-        {
-            return WriteRoleViewData(viewDataName);
-        }
-
         protected virtual SecureRoleBuilder RoleFromViewData(string viewDataName, ISet<string> set)
         {
             object value;
