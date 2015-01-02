@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>FluentHtml</id>
+    <version>1.0.0</version>
+    <authors>LoreSoft</authors>
+    <owners>LoreSoft</owners>
+    <licenseUrl>https://raw.githubusercontent.com/loresoft/FluentHtml/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/loresoft/FluentHtml</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Fluent Html Helper for ASP.NET MVC</description>
+    <summary>Fluent Html Helper for Asp.net MVC</summary>
+    <copyright>Copyright (c) 2015, LoreSoft</copyright>
+    <language>en-US</language>
+    <tags>AspNet Mvc AspNetMvc Fluent HtmlHelper</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Mvc" version="5.2.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\FluentHtml.dll" target="lib\net45\FluentHtml.dll" />
+    <file src="bin\Release\FluentHtml.pdb" target="lib\net45\FluentHtml.pdb" />
+    <file src="bin\Release\FluentHtml.XML" target="lib\net45\FluentHtml.xml" />
+    <file src="**\*.cs" target="src" />
+    <file src="..\GlobalAssemblyInfo.cs" target="src" />
+  </files>
+</package>
